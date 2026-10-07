@@ -7,6 +7,24 @@
 <meta name="description" content="Exam-focused current affairs notes delivered on Telegram every 2 hours, in 13 Indian languages, with practice MCQs. 3 free updates, then just ₹99/month. Built for UPSC, SSC, banking, railways and state exams like WBCS." />
 <meta name="theme-color" content="#1f3a8a" />
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2401090846964101');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <!-- Open Graph / social preview for FB ads -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="GK Pulse — Current Affairs on Telegram" />
@@ -395,6 +413,25 @@
     GK Pulse provides AI-generated summaries of publicly available news for study purposes. Always verify facts from the original source before relying on them for exams. Not affiliated with any government body, exam authority, or news publisher. © 2026 GK Pulse.
   </div>
 </footer>
+
+<!-- Fire a Meta "Lead" event when a visitor clicks any Telegram link -->
+<script>
+  (function () {
+    function fireLead() {
+      if (typeof fbq === "function") {
+        fbq("track", "Lead", { content_name: "Telegram Click" });
+      }
+    }
+    // Catch clicks on any link that points to the Telegram bot (t.me / telegram).
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a");
+      if (!a || !a.href) return;
+      if (a.href.indexOf("t.me/") !== -1 || a.href.indexOf("telegram.me/") !== -1) {
+        fireLead();
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
