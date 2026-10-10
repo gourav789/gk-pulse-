@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GK Pulse — Daily Current Affairs on Telegram for UPSC, SSC, Banking & State Exams</title>
-<meta name="description" content="Exam-focused current affairs notes delivered on Telegram every 2 hours, in 13 Indian languages, with practice MCQs. 3 free updates, then just ₹99/month. Built for UPSC, SSC, banking, railways and state exams like WBCS." />
+<title>GK Pulse — Free Daily Current Affairs on Telegram (10 AM) for UPSC, SSC, Banking & State Exams</title>
+<meta name="description" content="Join the free GK Pulse Telegram channel and get 10 exam-focused current-affairs notes every day at 10 AM — for UPSC, SSC, banking, railways and state exams like WBCS. Free to join." />
 <meta name="theme-color" content="#1f3a8a" />
 
 <!-- Meta Pixel Code -->
@@ -27,14 +27,15 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
 
 <!-- Open Graph / social preview for FB ads -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="GK Pulse — Current Affairs on Telegram" />
-<meta property="og:description" content="Exam-ready current affairs every 2 hours, in your language, with MCQs. 3 free updates, then ₹99/month." />
+<meta property="og:title" content="GK Pulse — Free Daily Current Affairs on Telegram" />
+<meta property="og:description" content="Free: 10 exam-focused current-affairs notes every day at 10 AM on Telegram. For UPSC, SSC, Banking & State exams." />
 <meta property="og:url" content="https://gkpulse.site/" />
 <meta property="og:site_name" content="GK Pulse" />
 
 <style>
   :root{
     --navy:#1f3a8a; --navy-dark:#162a63; --accent:#f59e0b; --accent-dark:#d97706;
+    --tg:#2aabee; --tg-dark:#1f8fcc;
     --ink:#1b2130; --muted:#5b6472; --line:#e6e9ef; --bg:#ffffff; --soft:#f6f8fc;
     --ok:#15803d; --radius:14px; --maxw:1080px;
   }
@@ -46,6 +47,8 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
   .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#1b2130;font-weight:700;padding:14px 26px;border-radius:999px;font-size:1.02rem;transition:transform .15s ease,background .15s ease;border:none;cursor:pointer}
   .btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
   .btn-lg{padding:16px 34px;font-size:1.1rem}
+  .btn-tg{background:var(--tg);color:#fff}
+  .btn-tg:hover{background:var(--tg-dark)}
   .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff}
   .btn-ghost:hover{background:rgba(255,255,255,.12)}
   .section{padding:72px 0}
@@ -53,27 +56,21 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
   .section .lead{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 44px}
   .eyebrow{display:inline-block;background:#eef2ff;color:var(--navy);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:18px}
 
-  /* Header */
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;color:var(--navy)}
   .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(245,158,11,.2)}
   .nav .btn{padding:10px 20px;font-size:.95rem}
 
-  /* Hero */
   .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dark) 100%);color:#fff;padding:80px 0 90px;text-align:center}
   .hero h1{font-size:2.7rem;line-height:1.12;margin-bottom:18px;letter-spacing:-.5px}
-  .hero p{font-size:1.18rem;color:#d7defb;max-width:640px;margin:0 auto 30px}
+  .hero p{font-size:1.18rem;color:#d7defb;max-width:660px;margin:0 auto 30px}
   .hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .hero .micro{margin-top:18px;font-size:.9rem;color:#aeb9e6}
-  .video-wrap{max-width:620px;margin:30px auto 6px;border-radius:16px;overflow:hidden;box-shadow:0 24px 50px -20px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.14)}
-  .video-ratio{position:relative;width:100%;padding-top:56.25%;background:#000}
-  .video-ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .video-label{margin:14px 0 2px;font-size:.95rem;color:#eaf0ff;font-weight:600}
   .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:34px}
   .badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#eaf0ff;padding:8px 16px;border-radius:999px;font-size:.86rem;font-weight:600}
+  .time-pill{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#1b2130;font-weight:800;padding:8px 18px;border-radius:999px;font-size:.95rem;margin-bottom:22px}
 
-  /* Grid cards */
   .grid{display:grid;gap:22px}
   .grid-3{grid-template-columns:repeat(3,1fr)}
   .grid-2{grid-template-columns:repeat(2,1fr)}
@@ -82,52 +79,36 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
   .card p{color:var(--muted);font-size:.97rem}
   .card .ico{font-size:1.6rem;margin-bottom:12px}
 
-  /* Steps */
-  .steps{counter-reset:step;display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+  .steps{counter-reset:step;display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
   .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 20px 20px}
   .step::before{counter-increment:step;content:counter(step);position:absolute;top:-16px;left:20px;width:34px;height:34px;background:var(--navy);color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:800}
   .step h4{margin:8px 0 6px;font-size:1.02rem}
   .step p{color:var(--muted);font-size:.92rem}
 
-  /* Pricing */
-  .pricing{background:var(--soft)}
-  .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:760px;margin:0 auto}
-  .plan{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;position:relative}
-  .plan.featured{border:2px solid var(--navy);box-shadow:0 20px 40px -24px rgba(31,58,138,.5)}
-  .plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:999px}
-  .plan h3{font-size:1.2rem;margin-bottom:4px}
-  .plan .price{font-size:2.6rem;font-weight:800;color:var(--navy);margin:10px 0 2px}
-  .plan .price span{font-size:1rem;font-weight:600;color:var(--muted)}
-  .plan ul{list-style:none;margin:18px 0 24px;display:grid;gap:10px}
-  .plan li{display:flex;gap:10px;align-items:flex-start;font-size:.96rem}
-  .plan li::before{content:"✓";color:var(--ok);font-weight:800;flex:0 0 auto}
-  .plan li.no::before{content:"–";color:var(--muted)}
+  /* Premium bot block */
+  .premium{background:var(--navy);color:#fff}
+  .premium h2{color:#fff}
+  .premium .lead{color:#c9d4f7}
+  .premium-box{max-width:720px;margin:0 auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:36px}
+  .premium ul{list-style:none;margin:0 0 26px;display:grid;gap:12px}
+  .premium li{display:flex;gap:10px;align-items:flex-start;font-size:1rem;color:#eaf0ff}
+  .premium li::before{content:"✓";color:var(--accent);font-weight:800;flex:0 0 auto}
 
-  /* Commands */
-  .cmds{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);max-width:860px;margin:0 auto}
-  .cmd{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
-  .cmd code{flex:0 0 auto;background:var(--navy);color:#fff;font-weight:700;font-size:.92rem;padding:5px 12px;border-radius:8px;font-family:"SF Mono",Menlo,Consolas,monospace}
-  .cmd div strong{display:block;font-size:1rem;margin-bottom:2px}
-  .cmd div span{color:var(--muted);font-size:.9rem}
-
-  /* Languages */
   .langs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
   .lang{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:600;font-size:.95rem}
 
-  /* Sources */
+  /* Compact bot upsell box */
+  .upsell{max-width:620px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px;text-align:center;box-shadow:0 16px 36px -24px rgba(31,58,138,.4)}
+  .upsell-tag{display:inline-block;background:#eef2ff;color:var(--navy);font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+  .upsell h3{font-size:1.4rem;margin-bottom:10px}
+  .upsell p{color:var(--muted);font-size:.98rem;margin-bottom:16px}
+  .upsell-price{font-size:2rem;font-weight:800;color:var(--navy);margin:6px 0 20px}
+  .upsell-price span{font-size:1rem;font-weight:600;color:var(--muted)}
+  .upsell-note{font-size:.86rem;color:var(--muted);margin-top:16px;margin-bottom:0}
+
   .sources{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:860px;margin:0 auto}
   .src{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px 16px;font-size:.92rem;color:var(--ink);font-weight:600}
 
-  /* Why ₹99 */
-  .why{background:var(--navy);color:#fff}
-  .why h2{color:#fff}
-  .why .lead{color:#c9d4f7}
-  .why .grid-2{max-width:900px;margin:0 auto}
-  .why .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
-  .why .card h3{color:#fff}
-  .why .card p{color:#cfd8f5}
-
-  /* FAQ */
   details{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:0 20px;margin-bottom:12px}
   details summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;display:flex;justify-content:space-between;align-items:center}
   details summary::-webkit-details-marker{display:none}
@@ -135,10 +116,9 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
   details[open] summary::after{content:"–"}
   details p{color:var(--muted);padding:0 0 18px;font-size:.96rem}
 
-  /* Final CTA */
-  .final{text-align:center;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dark) 100%);color:#fff;padding:70px 0}
+  .final{text-align:center;background:linear-gradient(160deg,var(--tg) 0%,var(--tg-dark) 100%);color:#fff;padding:70px 0}
   .final h2{color:#fff}
-  .final p{color:#d7defb;margin-bottom:28px}
+  .final p{color:#eaf7ff;margin-bottom:28px}
 
   footer{background:#0f1830;color:#aeb9e6;padding:34px 0;font-size:.9rem}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
@@ -146,10 +126,9 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
   .disc{max-width:var(--maxw);margin:16px auto 0;padding:0 20px;color:#6b7488;font-size:.82rem;text-align:center}
 
   @media(max-width:860px){
-    .grid-3,.grid-2,.steps,.plans,.cmds{grid-template-columns:1fr}
+    .grid-3,.grid-2,.steps{grid-template-columns:1fr}
     .hero h1{font-size:2.05rem}
     .section{padding:52px 0}
-    .nav .brand span.full{display:none}
   }
 </style>
 </head>
@@ -159,54 +138,40 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
 <header>
   <div class="wrap nav">
     <div class="brand"><span class="dot"></span>GK&nbsp;Pulse</div>
-    <a class="btn" href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">Start Free →</a>
+    <a class="btn btn-tg" href="https://t.me/gkpulse_official" target="_blank" rel="noopener">Join Free Channel →</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff">Current Affairs • On Telegram</span>
-    <h1>Stay exam-ready with current affairs, every 2 hours</h1>
-    <p>GK Pulse sends short, exam-focused current-affairs notes straight to your Telegram — in your language, with practice MCQs. Built for UPSC, SSC, Banking, Railways and State exams like WBCS.</p>
-
-    <div class="video-label">▶ Watch: how GK Pulse works (1 min)</div>
-    <div class="video-wrap">
-      <div class="video-ratio">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/NB11EFP4lwk?rel=0"
-          title="How GK Pulse works"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-
+    <div class="time-pill">🕙 New notes every day at 10 AM</div>
+    <h1>Free daily current affairs on Telegram</h1>
+    <p>Join the <b>GK Pulse</b> channel and get <b>10 exam-focused current-affairs notes every morning at 10 AM</b> — short, factual and ready to revise. Built for UPSC, SSC, Banking, Railways and State exams like WBCS. 100% free.</p>
     <div class="cta-row">
-      <a class="btn btn-lg" href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">▶ Start Free on Telegram</a>
-      <a class="btn btn-lg btn-ghost" href="#pricing">See Pricing</a>
+      <a class="btn btn-lg btn-tg" href="https://t.me/gkpulse_official" target="_blank" rel="noopener">📢 Join the Free Channel</a>
     </div>
-    <div class="micro">3 free updates to try • then just ₹99/month • cancel anytime</div>
+    <div class="micro">Free forever • No sign-up • Just open Telegram and join</div>
     <div class="badges">
-      <span class="badge">⏱ Updates every 2 hours</span>
-      <span class="badge">🗣 13 Indian languages</span>
-      <span class="badge">📝 Practice MCQs</span>
+      <span class="badge">🕙 Daily at 10 AM</span>
+      <span class="badge">📝 10 notes a day</span>
+      <span class="badge">🎯 Exam-focused</span>
       <span class="badge">🔗 Source link on every note</span>
     </div>
   </div>
 </section>
 
-<!-- WHAT YOU GET -->
+<!-- WHAT YOU GET (FREE CHANNEL) -->
 <section class="section">
   <div class="wrap">
-    <div style="text-align:center"><span class="eyebrow">What you get</span></div>
+    <div style="text-align:center"><span class="eyebrow">The free channel</span></div>
     <h2>Current affairs, made for exams</h2>
-    <p class="lead">No endless scrolling or long newspapers. Just crisp, exam-relevant notes you can revise in minutes.</p>
+    <p class="lead">No endless scrolling or long newspapers. Just 10 crisp, exam-relevant notes dropped in your Telegram every morning.</p>
     <div class="grid grid-3">
       <div class="card">
-        <div class="ico">⚡</div>
-        <h3>Fresh every 2 hours</h3>
-        <p>New notes delivered to your Telegram around the clock, so you never miss an important development.</p>
+        <div class="ico">🕙</div>
+        <h3>Every day at 10 AM</h3>
+        <p>A fresh set of 10 notes lands in the channel each morning — perfect for your daily revision routine.</p>
       </div>
       <div class="card">
         <div class="ico">🧠</div>
@@ -214,24 +179,24 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
         <p>Each item is summarised into a short, factual note with a subject tag and a "why it matters" line for exams.</p>
       </div>
       <div class="card">
-        <div class="ico">📝</div>
-        <h3>Practice MCQs</h3>
-        <p>Every note comes with 5 multiple-choice questions (in English) to test your recall instantly.</p>
-      </div>
-      <div class="card">
-        <div class="ico">🗣</div>
-        <h3>Your language</h3>
-        <p>Read notes in English or any of 12 Indian languages — pick once, change anytime.</p>
+        <div class="ico">🏷</div>
+        <h3>Subject-tagged</h3>
+        <p>Polity, Economy, International Relations, Science &amp; Tech, Environment, Schemes and more.</p>
       </div>
       <div class="card">
         <div class="ico">🔗</div>
         <h3>Verified sources</h3>
-        <p>Every note carries a link to the original source so you can always verify the facts.</p>
+        <p>Every note carries a link to the original source, so you can always verify the facts.</p>
       </div>
       <div class="card">
-        <div class="ico">🏷</div>
-        <h3>Subject-tagged</h3>
-        <p>Polity, Economy, International Relations, Science & Tech, Environment, Schemes and more.</p>
+        <div class="ico">💸</div>
+        <h3>Completely free</h3>
+        <p>No payment, no sign-up form. Just join the channel on Telegram and start reading.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🎯</div>
+        <h3>For your exam</h3>
+        <p>UPSC, SSC, Banking, Railways and State exams like WBCS — only exam-relevant news, nothing extra.</p>
       </div>
     </div>
   </div>
@@ -241,44 +206,21 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
 <section class="section" style="background:var(--soft)">
   <div class="wrap">
     <div style="text-align:center"><span class="eyebrow">How it works</span></div>
-    <h2>Start in under a minute</h2>
+    <h2>Join in under a minute</h2>
     <p class="lead">No app to install, no sign-up forms. It all happens inside Telegram.</p>
     <div class="steps">
-      <div class="step"><h4>Open the bot</h4><p>Tap "Start Free" to open GK Pulse on Telegram.</p></div>
-      <div class="step"><h4>Send /start</h4><p>Pick your language from the menu — English, Hindi, Tamil and more.</p></div>
-      <div class="step"><h4>Get notes</h4><p>Receive the latest notes instantly, then fresh updates every 2 hours.</p></div>
-      <div class="step"><h4>Subscribe</h4><p>Enjoyed your free updates? Subscribe for ₹99/month to keep going.</p></div>
+      <div class="step"><h4>Tap "Join Channel"</h4><p>It opens the GK Pulse channel directly in your Telegram app.</p></div>
+      <div class="step"><h4>Hit Join</h4><p>One tap and you're in. No forms, no payment.</p></div>
+      <div class="step"><h4>Read daily at 10 AM</h4><p>Get 10 fresh exam notes every morning, ready to revise.</p></div>
     </div>
     <div style="text-align:center;margin-top:40px">
-      <a class="btn btn-lg" href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">▶ Try it free now</a>
-    </div>
-  </div>
-</section>
-
-<!-- BOT COMMANDS -->
-<section class="section">
-  <div class="wrap">
-    <div style="text-align:center"><span class="eyebrow">Bot commands</span></div>
-    <h2>Everything is a simple command</h2>
-    <p class="lead">Just type these inside the Telegram bot. The most important one is <b>/start</b> — it registers you and lets you pick your language.</p>
-    <div class="cmds">
-      <div class="cmd"><code>/start</code><div><strong>Start &amp; pick language</strong><span>Registers you and shows the language menu. You get your first notes right away.</span></div></div>
-      <div class="cmd"><code>/language</code><div><strong>Change language</strong><span>Switch to any of the 13 languages anytime. Future notes arrive in the new language.</span></div></div>
-      <div class="cmd"><code>/subscribe</code><div><strong>Subscribe (₹99/month)</strong><span>Get the secure payment link to continue after your free updates.</span></div></div>
-      <div class="cmd"><code>/status</code><div><strong>Check your plan</strong><span>See your plan, language, Chat ID and when the next notes arrive.</span></div></div>
-      <div class="cmd"><code>/myid</code><div><strong>Get your Chat ID</strong><span>Shows your Telegram Chat ID — enter it on the payment page to activate.</span></div></div>
-      <div class="cmd"><code>/stop</code><div><strong>Pause notes</strong><span>Temporarily stop receiving notes without losing your plan.</span></div></div>
-      <div class="cmd"><code>/resume</code><div><strong>Resume notes</strong><span>Start receiving notes again after pausing.</span></div></div>
-      <div class="cmd"><code>/help</code><div><strong>Help</strong><span>Shows the full list of commands and a quick guide.</span></div></div>
-    </div>
-    <div style="text-align:center;margin-top:40px">
-      <a class="btn btn-lg" href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">▶ Open the bot &amp; send /start</a>
+      <a class="btn btn-lg btn-tg" href="https://t.me/gkpulse_official" target="_blank" rel="noopener">📢 Join the Free Channel</a>
     </div>
   </div>
 </section>
 
 <!-- SOURCES -->
-<section class="section" style="background:var(--soft)">
+<section class="section">
   <div class="wrap">
     <div style="text-align:center"><span class="eyebrow">Our sources</span></div>
     <h2>Where our notes come from</h2>
@@ -300,93 +242,16 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- LANGUAGES -->
-<section class="section">
+<!-- SMALL BOT UPSELL (one compact box, with price) -->
+<section class="section" style="background:var(--soft)">
   <div class="wrap">
-    <div style="text-align:center"><span class="eyebrow">Languages</span></div>
-    <h2>Study in a language you're comfortable in</h2>
-    <p class="lead">Notes are available in English plus 12 Indian languages. Practice MCQs are provided in English.</p>
-    <div class="langs">
-      <span class="lang">English</span>
-      <span class="lang">हिन्दी Hindi</span>
-      <span class="lang">বাংলা Bengali</span>
-      <span class="lang">मराठी Marathi</span>
-      <span class="lang">ગુજરાતી Gujarati</span>
-      <span class="lang">தமிழ் Tamil</span>
-      <span class="lang">తెలుగు Telugu</span>
-      <span class="lang">ಕನ್ನಡ Kannada</span>
-      <span class="lang">മലയാളം Malayalam</span>
-      <span class="lang">ਪੰਜਾਬੀ Punjabi</span>
-      <span class="lang">ଓଡ଼ିଆ Odia</span>
-      <span class="lang">اردو Urdu</span>
-      <span class="lang">অসমীয়া Assamese</span>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section pricing" id="pricing">
-  <div class="wrap">
-    <div style="text-align:center"><span class="eyebrow">Pricing</span></div>
-    <h2>Simple, honest pricing</h2>
-    <p class="lead">Try it free. If it helps your prep, keep going for less than the price of one coffee a month.</p>
-    <div class="plans">
-      <div class="plan">
-        <h3>Free Trial</h3>
-        <div class="price">₹0</div>
-        <div style="color:var(--muted);font-size:.92rem">to see if it's for you</div>
-        <ul>
-          <li>3 free updates after you join</li>
-          <li>Notes in your chosen language</li>
-          <li>Practice MCQs included</li>
-          <li class="no">Stops after your 3 free updates</li>
-        </ul>
-        <a class="btn" style="width:100%;justify-content:center" href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">Start Free</a>
-      </div>
-      <div class="plan featured">
-        <span class="tag">Best value</span>
-        <h3>Monthly</h3>
-        <div class="price">₹99<span>/month</span></div>
-        <div style="color:var(--muted);font-size:.92rem">everything, unlimited</div>
-        <ul>
-          <li>Notes every 2 hours, all day</li>
-          <li>All 13 languages</li>
-          <li>5 practice MCQs per note</li>
-          <li>Source link on every note</li>
-          <li>Cancel anytime</li>
-        </ul>
-        <a class="btn" style="width:100%;justify-content:center" href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">Subscribe ₹99/month</a>
-      </div>
-    </div>
-    <p style="text-align:center;color:var(--muted);font-size:.9rem;margin-top:24px">
-      To subscribe: open the bot, send <b>/subscribe</b>, pay ₹99, and enter your Telegram Chat ID (the bot shows it with <b>/myid</b>). Activation usually within a few hours.
-    </p>
-  </div>
-</section>
-
-<!-- WHY ₹99 -->
-<section class="section why">
-  <div class="wrap">
-    <div style="text-align:center"><span class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff">Fair &amp; transparent</span></div>
-    <h2>Why a monthly subscription?</h2>
-    <p class="lead">We believe in being upfront about why GK Pulse costs ₹99 a month.</p>
-    <div class="grid grid-2">
-      <div class="card">
-        <h3>🔄 It's a living service, not a one-time file</h3>
-        <p>Current affairs change every single day. Your ₹99 keeps fresh, exam-relevant notes flowing to you every 2 hours — not a stale PDF you buy once and forget.</p>
-      </div>
-      <div class="card">
-        <h3>💡 Real costs behind every note</h3>
-        <p>Each note is written and translated using paid AI, running around the clock. The monthly fee covers these processing costs so we can keep the quality high.</p>
-      </div>
-      <div class="card">
-        <h3>🌐 Many languages, every day</h3>
-        <p>Translating notes into 13 languages, every few hours, takes ongoing work. A small monthly fee keeps all languages available to everyone.</p>
-      </div>
-      <div class="card">
-        <h3>🎯 Focused, ad-free, no spam</h3>
-        <p>No ads, no clickbait, no selling your data. Just clean notes made for your exam. Your subscription is what keeps it that way.</p>
-      </div>
+    <div class="upsell">
+      <div class="upsell-tag">Optional upgrade</div>
+      <h3>Want more than the daily digest?</h3>
+      <p>Our premium <b>GK Pulse Bot</b> gives you notes <b>every 2 hours</b>, in <b>13 Indian languages</b>, each with <b>5 practice MCQs</b> — delivered instantly to your private chat.</p>
+      <div class="upsell-price">Just ₹99<span>/month</span></div>
+      <a class="btn" href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">🤖 Try the Bot</a>
+      <p class="upsell-note">But if you just want free daily notes, the channel above is all you need. 👆</p>
     </div>
   </div>
 </section>
@@ -397,13 +262,11 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
     <div style="text-align:center"><span class="eyebrow">FAQ</span></div>
     <h2>Questions, answered</h2>
     <div style="margin-top:34px">
-      <details open><summary>How do I start?</summary><p>Tap any "Start Free" button to open GK Pulse on Telegram, send <b>/start</b>, and pick your language. You'll get the latest notes right away.</p></details>
-      <details><summary>What do I get for free?</summary><p>After you join, you receive 3 free updates so you can see the quality. After that, a subscription of ₹99/month keeps the notes coming.</p></details>
+      <details open><summary>Is the channel really free?</summary><p>Yes. The GK Pulse Telegram channel is completely free — just tap "Join Free Channel", hit Join, and you'll get 10 exam-focused notes every day at 10 AM.</p></details>
+      <details><summary>What time do notes come?</summary><p>The free channel posts a fresh set of 10 current-affairs notes every day at around 10 AM IST.</p></details>
       <details><summary>Which exams is this for?</summary><p>UPSC, SSC, banking (IBPS/SBI), railways (RRB), and state exams such as WBCS, plus other competitive exams that test current affairs and general knowledge.</p></details>
-      <details><summary>Which languages are available?</summary><p>English and 12 Indian languages: Hindi, Bengali, Marathi, Gujarati, Tamil, Telugu, Kannada, Malayalam, Punjabi, Odia, Urdu and Assamese. Practice MCQs are in English.</p></details>
       <details><summary>Where do the notes come from?</summary><p>We track trusted official and national feeds — PIB, RBI, SEBI, The Hindu, Indian Express, Hindustan Times, Down To Earth and more. Every note links to the original source so you can verify it.</p></details>
-      <details><summary>How do I pay and activate?</summary><p>In the bot, send <b>/subscribe</b> to get the payment link, pay ₹99, and enter your Telegram Chat ID (shown by <b>/myid</b>). Your subscription is activated, usually within a few hours.</p></details>
-      <details><summary>Can I cancel?</summary><p>Yes. It's a simple monthly plan with no lock-in. If you don't renew, delivery simply stops at the end of your month.</p></details>
+      <details><summary>Is there a paid option?</summary><p>The channel is free forever. If you want more, the optional <b>GK Pulse Bot</b> (₹99/month) gives updates every 2 hours, 13 Indian languages, and 5 practice MCQs per note. It's completely optional — the free channel is all you need to get started.</p></details>
     </div>
   </div>
 </section>
@@ -411,9 +274,9 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
 <!-- FINAL CTA -->
 <section class="final">
   <div class="wrap">
-    <h2>Start free today</h2>
-    <p>Join on Telegram, get your first notes in seconds, and see if GK Pulse fits your prep.</p>
-    <a class="btn btn-lg" href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">▶ Start Free on Telegram</a>
+    <h2>Join the free channel today</h2>
+    <p>Get 10 exam-ready current-affairs notes every morning at 10 AM — free, on Telegram.</p>
+    <a class="btn btn-lg" href="https://t.me/gkpulse_official" target="_blank" rel="noopener">📢 Join the Free Channel</a>
   </div>
 </section>
 
@@ -421,8 +284,8 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="brand" style="color:#fff"><span class="dot"></span>GK Pulse</div>
     <div>
-      <a href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">Telegram Bot</a> &nbsp;•&nbsp;
-      <a href="#pricing">Pricing</a> &nbsp;•&nbsp;
+      <a href="https://t.me/gkpulse_official" target="_blank" rel="noopener">Free Channel</a> &nbsp;•&nbsp;
+      <a href="https://t.me/gourav_currentaffairs_bot" target="_blank" rel="noopener">Bot</a> &nbsp;•&nbsp;
       <a href="mailto:gsrseo81@gmail.com">Contact</a>
     </div>
   </div>
@@ -431,7 +294,7 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
   </div>
 </footer>
 
-<!-- Fire a Meta "Lead" event when a visitor clicks any Telegram link -->
+<!-- Fire a Meta "Lead" event when a visitor clicks any Telegram link (channel or bot) -->
 <script>
   (function () {
     function fireLead() {
@@ -439,7 +302,6 @@ src="https://www.facebook.com/tr?id=2401090846964101&ev=PageView&noscript=1"
         fbq("track", "Lead", { content_name: "Telegram Click" });
       }
     }
-    // Catch clicks on any link that points to the Telegram bot (t.me / telegram).
     document.addEventListener("click", function (e) {
       var a = e.target.closest("a");
       if (!a || !a.href) return;
